@@ -1,17 +1,21 @@
 //Define my variables
-let startButton = document.querySelector(".startbtn");
-let questionContainer = document.querySelector(".question-container");
-let nextButton = document.querySelector(".nextbtn");
-let gameQuestionText = document.getElementById(".question-container");
-let answerButton = document.querySelectorAll("s.ubmitbtn");
-let answerMessage = document.querySelector(".answer");
-let scoreText = document.querySelector(".score");
-let finalScore = document.querySelector(".final-score");
-let title = document.querySelector(".title");
-let newGame = document.querySelector(".new-game");
-let resetButton = document.querySelector(".resetbtn")
-let score = 0;
-let currentQuestionIndex = 0;
+// let startButton = document.querySelector(".startbtn");
+// let questionContainer = document.querySelector(".question-container");
+// let nextButton = document.querySelector(".nextbtn");
+// let gameQuestionText = document.getElementById(".question-container");
+// let answerButton = document.querySelectorAll("s.ubmitbtn");
+// let answerMessage = document.querySelector(".answer");
+// let scoreText = document.querySelector(".score");
+// let finalScore = document.querySelector(".final-score");
+// let title = document.querySelector(".title");
+// let newGame = document.querySelector(".new-game");
+// let resetButton = document.querySelector(".resetbtn")
+// let score = 0;
+// let currentQuestionIndex = 0;
+
+import data from './data.json' assert{type:"json"}
+// console.log(data)
+console.log(data[0].answers)
 
 //Sample Question Arrays
 const quizQuestions = [
@@ -68,11 +72,11 @@ const quizQuestions = [
   ];
 
 //Function to run when Quiz Begins
-  function startQuiz()[
+  function startQuiz(){
         currentQuestionIndex = 0,
         score = 0,
         nextButton.innerHTML = "Next",
-        showQuestion(),
-  ]
+        showQuestion()
+}
 
 //Function to display Question on page

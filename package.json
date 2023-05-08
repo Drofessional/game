@@ -1,0 +1,12 @@
+{
+  "name": "project-1-sei",
+  "version": "1.0.0",
+  "description": "## Project Choice (Tell us which project you're doing!)",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

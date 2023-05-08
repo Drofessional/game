@@ -1,0 +1,52 @@
+[
+    {
+      "question": "What was the largest empire in history?",
+      "answers": [
+        "Roman Empire",
+        "British Empire",
+        "Mongol Empire",
+        "Ottoman Empire"
+      ],
+      "correctAnswer": "Mongol Empire"
+    },
+    {
+      "question": "Who was the first President of the United States?",
+      "answers": [
+        "Thomas Jefferson",
+        "George Washington",
+        "John Adams",
+        "Abraham Lincoln"
+      ],
+      "correctAnswer": "George Washington"
+    },
+    {
+      "question": "What was the main cause of World War I?",
+      "answers": [
+        "Nationalism",
+        "Imperialism",
+        "Militarism",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "question": "Who invented the telephone?",
+      "answers": [
+        "Alexander Graham Bell",
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Guglielmo Marconi"
+      ],
+      "correctAnswer": "Alexander Graham Bell"
+    },
+    {
+      "question": "What was the Renaissance?",
+      "answers": [
+        "A period of artistic and intellectual revival",
+        "A political movement",
+        "A religious revolution",
+        "A social movement"
+      ],
+      "correctAnswer": "A period of artistic and intellectual revival"
+    }
+  ]
