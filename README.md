@@ -16,11 +16,11 @@ The game will have a leaderboard that displays the top scores from all players. 
 
 **Initial Landing View**
 
-![image](https://lucid.app/lucidchart/2bead1e4-16b0-4fad-8780-e791b1b92600/edit?invitationId=inv_bf05d0dc-fff4-4dc7-b268-984f059cb2c8)
+![image](/initialwireframe.png)
 
 **Results View**
 
-![image](https://lucid.app/lucidchart/66426c68-6efb-411d-9401-803fbf763d1f/edit?invitationId=inv_488455dc-5a89-4c84-8e96-5069ae81ddb2)
+![image](/winnerwireframe.png)
 
 ## User Stories
 
