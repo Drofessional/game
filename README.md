@@ -1,42 +1,43 @@
-# Project Proposal Example
+# Project Proposal
 
 ## Project Choice (Tell us which project you're doing!)
 
-- [ ] Flash Cards
-- [ ] Trivia (Self-scoring)
-- [ ] Spaceman
-- [ ] Tower of Hanoi
-- [ ] Simon
+- [X] Trivia (Self-scoring)
 
 ## Project Description 
 
-My app is called Tic Tac Toe. It's a game app for players who want to play Tic Tac Toe online. Two players can join an online game and play a round of Tic Tac Toe, with the score being kept automatically and game results displayed at then end of a round -- whichever player won, or in the case of a draw, a tie between the users. Users will have the option to play again. In the future, I'd like to add a feature where one player can play against the computer. 
+My Trivia Game is a web-based game that challenges players with a series of questions from various categories, such as sports, entertainment, history, science, and more. The game has a simple and intuitive interface that allows players to easily navigate through different categories, select answers, and track their score.
+
+Players start the game by choosing a category and then answering a set of multiple-choice questions within a specific time limit. The game will provide instant feedback on each question, indicating whether the answer was correct or incorrect. If the player answers correctly, their score will increase, and they will move on to the next question in the category. If the player answers incorrectly, the game will deduct points, and the player will have to try again.
+
+The game will have a leaderboard that displays the top scores from all players. The player with the highest score will be on top of the leaderboard. The game will also include a timer that counts down the remaining time for each question, adding an extra level of excitement and challenge.
 
 ## Wire Frames
 
 **Initial Landing View**
 
-![image](https://media.git.generalassemb.ly/user/21811/files/0f7aee00-c1d9-11ea-9dad-de086a5c91fc)
+![image](https://lucid.app/lucidchart/2bead1e4-16b0-4fad-8780-e791b1b92600/edit?invitationId=inv_bf05d0dc-fff4-4dc7-b268-984f059cb2c8)
 
 **Results View**
 
-![image](https://media.git.generalassemb.ly/user/21811/files/1a358300-c1d9-11ea-95da-6c14aefb0f18)
+![image](https://lucid.app/lucidchart/66426c68-6efb-411d-9401-803fbf763d1f/edit?invitationId=inv_488455dc-5a89-4c84-8e96-5069ae81ddb2)
 
 ## User Stories
 
 #### MVP Goals
 
-- As a player, I want my game to recognize three ticks in a row so that I know who won.
-- As a player, I would like to be informed when the game is over due to a tie.
-- As a player, I would like to know whose turn it is so that I don't have to keep track.
-- As a player, I would like to be informed with some indication when I mark a game box so that I know my selection worked.
-- As a player who requires assistive technologies, I would like accessibility features so that I'm not left out of enjoying the game.
-- As a player I would like to be able to restart the game after a win, loss or tie.
-- As a player, I want the UI to be engaging and out of the way so that I enjoy the experience of playing the game.\*\*
+- As a player, I would like to be able to input name when first starting the game
+- As a player, I want my game to show 4 potential answers for the question that is displayed.
+- As a player, I want my game to show if the answer is correct or not after confirming choice with a click.
+- As a player, I want to track the users score after each question, adding more points for correct answers.
+- As a player, I want to have a button that enables restarting the game.
+- As a player, I would like to display a list of high scores of past players.
 
 #### Stretch Goals
 
-- As a player, I would like a victory animation when I win the game, so that I feel good about my victory!
+- As a player, I would like to have varying levels of difficulty that can be chosen at the start
+- As a player, I would like implement a timer to force an answer within 60 seconds of seeing the question
+- As a player, I would like a victory animation if I attain a new high score
 - As a player, I would like to hear an audible sound when I mark a game box so that I know my selection worked.
-- As a player, I would like to play this game online so that I don't have to have my challenger sitting next to me.
-- As a player who wants to dominate the battlefield I want to become the ultimate tic tac toe tactician so I can beat all of my opponents
+- As a player, I would like to implement social media sharing functionality to allow users to share their scores or invite friends to play.
+- As a player, I would like to add multimedia elements, such as images or videos, to enhance the user experience.
