@@ -59,24 +59,7 @@ function checkAnswerWrapper(e) {
   checkAnswer(e.target.innerText, data[index - 1]?.correctAnswer);
 }
 
-function nextQuestion() {
-
-  if (index === data.length) {
-    // Quiz finished, reset index, and display final score or any other actions you want to perform
-    quizFinished = true;
-    index = 0;
-    // You can also remove the event listeners here, if you want
-    answerButtons.forEach((button) => {
-      button.removeEventListener("click", checkAnswerWrapper);
-    });
-
-    scoreText.innerText = `Final Score: ${score}`;
-    scoreText.classList.remove("hidden");
-
-    return;
-  }
-
-  questionContainer.innerText = data[index].question;
+questionContainer.innerText = data[index].question;
   let choiceOne = document.querySelector(".answerbtn-A");
   let choiceTwo = document.querySelector(".answerbtn-B");
   let choiceThree = document.querySelector(".answerbtn-C");
