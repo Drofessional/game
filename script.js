@@ -1,82 +1,54 @@
-//Define my variables
-// let startButton = document.querySelector(".startbtn");
-// let questionContainer = document.querySelector(".question-container");
-// let nextButton = document.querySelector(".nextbtn");
-// let gameQuestionText = document.getElementById(".question-container");
-// let answerButton = document.querySelectorAll("s.ubmitbtn");
-// let answerMessage = document.querySelector(".answer");
-// let scoreText = document.querySelector(".score");
-// let finalScore = document.querySelector(".final-score");
-// let title = document.querySelector(".title");
-// let newGame = document.querySelector(".new-game");
-// let resetButton = document.querySelector(".resetbtn")
-// let score = 0;
-// let currentQuestionIndex = 0;
+// Define my variables
+let startbtn = document.querySelector(".startbtn");
+let questionContainer = document.querySelector(".question-container");
+let nextbtn = document.querySelector(".nextButton");
+let answerMessage = document.querySelector(".answer");
+let scoreText = document.querySelector(".score");
+let newGame = document.querySelector(".new-game");
+let resetButton = document.querySelector(".resetbtn")
+let score = 0;
+let currentQuestionIndex = 0;
+let answerButtons = document.querySelectorAll(".answerbtn")
 
 import data from './data.json' assert{type:"json"}
+let index = 0
 // console.log(data)
-console.log(data[0].answers)
+console.log(data[index])
 
-//Sample Question Arrays
-const quizQuestions = [
-    {
-      question: "What was the largest empire in history?",
-      answers: [
-        "Roman Empire",
-        "British Empire",
-        "Mongol Empire",
-        "Ottoman Empire"
-      ],
-      correctAnswer: "Mongol Empire"
-    },
-    {
-      question: "Who was the first President of the United States?",
-      answers: [
-        "Thomas Jefferson",
-        "George Washington",
-        "John Adams",
-        "Abraham Lincoln"
-      ],
-      correctAnswer: "George Washington"
-    },
-    {
-      question: "What was the main cause of World War I?",
-      answers: [
-        "Nationalism",
-        "Imperialism",
-        "Militarism",
-        "All of the above"
-      ],
-      correctAnswer: "All of the above"
-    },
-    {
-      question: "Who invented the telephone?",
-      answers: [
-        "Alexander Graham Bell",
-        "Thomas Edison",
-        "Nikola Tesla",
-        "Guglielmo Marconi"
-      ],
-      correctAnswer: "Alexander Graham Bell"
-    },
-    {
-      question: "What was the Renaissance?",
-      answers: [
-        "A period of artistic and intellectual revival",
-        "A political movement",
-        "A religious revolution",
-        "A social movement"
-      ],
-      correctAnswer: "A period of artistic and intellectual revival"
-    }
-  ];
+startbtn.addEventListener("click", startQuiz);
+// nextbtn.addEventListener("click", nextQuestion);
 
-//Function to run when Quiz Begins
-  function startQuiz(){
-        currentQuestionIndex = 0,
-        score = 0,
-        nextButton.innerHTML = "Next",
-        showQuestion()
+console.log(answerButtons)
+
+function startQuiz() {
+      startbtn.classList.add("hidden");
+      nextbtn.classList.remove("hidden");
+      answerButtons.forEach((bttn) => {
+        bttn.classList.remove("hidden");
+      })
+      resetButton.classList.remove("hidden")
+      questionContainer.classList.remove("hidden")
+      nextQuestion()
+  }    
+
+// Function to show the next Question
+function nextQuestion(){
+  questionContainer.innerText = data[index].question;
+  let choiceOne = document.querySelector(".op1");
+  let choiceTwo = document.querySelector(".op2");
+  let choiceThree = document.querySelector(".op3");
+  let choiceFour = document.querySelector(".op4");
+
+  choiceOne.innerText = data[index].answers[0]
+  choiceTwo.innerText = data[index].answers[1]
+  choiceThree.innerText = data[index].answers[2]
+  choiceFour.innerText = data[index].answers[3]
 }
 
-//Function to display Question on page
+
+// //Function to display Question on page
+// startQuiz();
+
+// //Show results upon submitting
+
+// submitButton

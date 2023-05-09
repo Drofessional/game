@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" type="module" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,28 +18,28 @@
                 Start Game
             </button>
         </div>
-        <div class="question-container">
+        <div class="question-container hidden">
             Question goes here.
         </div>
         <div class="answer-buttons">
-            <lbr><button class="btn" onclick="" id="op1">option1</button>
+            <lbr><button class="answerbtn hidden" id="opt1">option1</button>
 
-            <button class="btn" id="op2">option2</button>
+            <button class="answerbtn hidden" id="opt2">option2</button>
 
-            <button class="btn" id="op3">option3</button>
+            <button class="answerbtn hidden" id="opt3">option3</button>
 
-            <button class="btn" id="op4">option4</button>
+            <button class="answerbtn hidden" id="opt4">option4</button>
             </lbr>
         </div>
-        <div class="answer" hidden> Answer</div>
-        <div class="nextButton">
+        <div class="answer hidden"> Answer</div>
+        <div class="nextButton hidden">
             <button class="nextbtn">Next Question</button>
         </div>
-        <div class="score">
+        <div class="score hidden">
             Your score:
         </div>
         <div class="reset">
-            <button class="resetbtn">Reset Game</button>
+            <button class="resetbtn hidden">Reset Game</button>
         </div>
     </div>
 </body>
