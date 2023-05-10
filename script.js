@@ -34,10 +34,19 @@ function shuffleArray(array) {
 
 //StartQuiz function, hides Start and unhides Next/Answers/Reset/Question divs
 function startQuiz() {
+  // Get the number of questions from the input
+  let numQuestions = document.getElementById('numQuestions').value;
+  // Hide the number of questions input
+  document.getElementById('numQuestions').classList.add('hidden');
+  // Validate the number of questions
+  if (numQuestions > data.length) {
+    alert("The number of questions cannot be more than the total number of questions available.");
+    return;
+  }
   //Shuffle questions
   shuffleArray(data);
   //truncate data to first 10 questions
-  quizData = data.slice(0,10);
+  quizData = data.slice(0,numQuestions);
   startbtn.classList.add("hidden");
   nextbtn.classList.remove("hidden");
   //Loops through each button to remove all 4 buttons instead of just 1
@@ -53,7 +62,6 @@ function startQuiz() {
 // Function to check if answer is correct
 // Pass clickedAnswer and correctAnswer through the function
 function checkAnswer(clickedAnswer, correctAnswer) {
-
   //Check if Clicked = the correct Answer, then change the innerText of answerMessage accordingly
   if (clickedAnswer.innerText === correctAnswer) {
     // answerMessage.innerText = "Correct!";
@@ -81,13 +89,14 @@ function checkAnswerWrapper(e) {
   //If quiz finished is true, then stop the function
   if (quizFinished) return;
   //Calls check answer function on the text of the answer option and the correct answer for the question
-  checkAnswer(e.target, data[index - 1]?.correctAnswer);
+  checkAnswer(e.target, quizData[index - 1]?.correctAnswer);
 }
+
 
 //Function for displaying next question
 function nextQuestion() {
   //Establish that index will only go up to 10 questions
-  if (index === 10) {
+  if (index === quizData.length) {
     // Quiz finished, reset index, and display final score or any other actions you want to perform
     quizFinished = true;
     index = 0;
