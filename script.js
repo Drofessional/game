@@ -130,6 +130,8 @@ function nextQuestion() {
     answerButtons.forEach((button) => {
       button.removeEventListener("click", checkAnswerWrapper);
       button.classList.remove("hidden");
+    displayHighscores();
+  return;
     });
 
     //This code will hide everything but your score when the quiz is over
@@ -160,7 +162,26 @@ function nextQuestion() {
   index++;
 }
 
+//Function to display High Scores
+function displayHighscores() {
+  let highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+  let highscoreList = document.getElementById('highscores');
+  highscoreList.innerHTML = '';  // Clear the list
+  for (let highscore of highscores) {
+    let li = document.createElement('li');
+    li.textContent = `${highscore.player}: ${highscore.score}`;
+    highscoreList.appendChild(li);
+  }
+  document.getElementById('highscore-list').classList.remove('hidden');
+}
+
+
 //Reset game by reloading the page
 function resetGame() {
+  let highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+  highscores.push({ player: playerName, score: score });
+  highscores.sort((a, b) => b.score - a.score);
+  highscores = highscores.slice(0, 10);  // Keep only top 10 scores
+  localStorage.setItem('highscores', JSON.stringify(highscores));
   location.reload();
 }
