@@ -136,3 +136,11 @@ body{
     border-radius: 5px;
     margin-bottom: 16px;
    }
+   
+   .correct {
+    background-color: green;
+  }
+  
+  .incorrect {
+    background-color: red;
+  }

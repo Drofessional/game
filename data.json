@@ -48,5 +48,125 @@
         "A social movement"
       ],
       "correctAnswer": "A period of artistic and intellectual revival"
+    },
+    {
+      "question": "In what year did World War I begin?",
+      "answers": [
+        "1914",
+        "1915",
+        "1916",
+        "1917"
+      ],
+      "correctAnswer": "1914"
+    },
+    {
+      "question": "What was the first civilization to develop writing?",
+      "answers": [
+        "Egyptians",
+        "Sumerians",
+        "Mayans",
+        "Chinese"
+      ],
+      "correctAnswer": "Sumerians"
+    },
+    {
+      "question": "Who was the first emperor of Rome?",
+      "answers": [
+        "Julius Caesar",
+        "Augustus",
+        "Nero",
+        "Constantine"
+      ],
+      "correctAnswer": "Augustus"
+    },
+    {
+      "question": "Which two countries were involved in the Hundred Years' War?",
+      "answers": [
+        "France and England",
+        "Spain and Portugal",
+        "Italy and Germany",
+        "Russia and Sweden"
+      ],
+      "correctAnswer": "France and England"
+    },
+    {
+      "question": "What is the Magna Carta?",
+      "answers": [
+        "A treaty signed between France and England",
+        "A religious text",
+        "A document outlining the rights of English citizens",
+        "A code of laws"
+      ],
+      "correctAnswer": "A document outlining the rights of English citizens"
+    },
+    {
+      "question": "Who was the first European explorer to reach India by sea?",
+      "answers": [
+        "Christopher Columbus",
+        "Ferdinand Magellan",
+        "Vasco da Gama",
+        "John Cabot"
+      ],
+      "correctAnswer": "Vasco da Gama"
+    },
+    {
+      "question": "What was the name of the first successful powered airplane?",
+      "answers": [
+        "Wright Flyer",
+        "Spirit of St. Louis",
+        "Red Baron",
+        "Bleriot XI"
+      ],
+      "correctAnswer": "Wright Flyer"
+    },
+    {
+      "question": "Who was the first female prime minister of a country?",
+      "answers": [
+        "Golda Meir",
+        "Indira Gandhi",
+        "Margaret Thatcher",
+        "Benazir Bhutto"
+      ],
+      "correctAnswer": "Sirimavo Bandaranaike"
+    },
+    {
+      "question": "What was the name of the first satellite launched into space?",
+      "answers": [
+        "Vanguard 1",
+        "Sputnik 1",
+        "Explorer 1",
+        "Telstar 1"
+      ],
+      "correctAnswer": "Sputnik 1"
+    },
+    {
+      "question": "Who discovered penicillin?",
+      "answers": [
+        "Alexander Fleming",
+        "Marie Curie",
+        "Albert Einstein",
+        "Isaac Newton"
+      ],
+      "correctAnswer": "Alexander Fleming"
+    },
+    {
+      "question": "What was the first animal to be sent into space?",
+      "answers": [
+        "Dog",
+        "Monkey",
+        "Cat",
+        "Mouse"
+      ],
+      "correctAnswer": "Dog"
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answers": [
+        "Leonardo da Vinci",
+        "Michelangelo",
+        "Raphael",
+        "Vincent van Gogh"
+      ],
+      "correctAnswer": "Leonardo da Vinci"
     }
   ]

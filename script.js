@@ -5,13 +5,19 @@ let nextbtn = document.querySelector(".nextButton");
 let answerMessage = document.querySelector(".answer");
 let scoreText = document.querySelector(".score");
 let resetButton = document.querySelector(".resetbtn");
-let score = 0;
 let answerButtons = document.querySelectorAll(".answerbtn");
+//Retrieve the answers buttons from the HTML document
+let choiceOne = document.querySelector(".answerbtn-A");
+let choiceTwo = document.querySelector(".answerbtn-B");
+let choiceThree = document.querySelector(".answerbtn-C");
+let choiceFour = document.querySelector(".answerbtn-D");
+//Set starting index and score to 0
+let index = 0;
+let score = 0;
+
 
 //importing Question data from JSON :: remember to add type="module" to script tag
 import data from './data.json' assert{type:"json"};
-
-let index = 0;
 
 //Added event listeners to Start, Next, and Reset Buttons
 startbtn.addEventListener("click", startQuiz);
@@ -59,32 +65,49 @@ function checkAnswerWrapper(e) {
   checkAnswer(e.target.innerText, data[index - 1]?.correctAnswer);
 }
 
-questionContainer.innerText = data[index].question;
-  let choiceOne = document.querySelector(".answerbtn-A");
-  let choiceTwo = document.querySelector(".answerbtn-B");
-  let choiceThree = document.querySelector(".answerbtn-C");
-  let choiceFour = document.querySelector(".answerbtn-D");
+//Function for displaying next question
+function nextQuestion() {
+  //check if Index is equal to length of the array
+  if (index === data.length) {
+    // Quiz finished, reset index, and display final score or any other actions you want to perform
+    quizFinished = true;
+    index = 0;
+    // You can also remove the event listeners here, if you want
+    answerButtons.forEach((button) => {
+      button.removeEventListener("click", checkAnswerWrapper);
+      button.classList.remove("hidden");
+    });
 
+    //This code will hide everything but your score when the quiz is over
+    answerButtons.forEach((button) => {
+      button.classList.add("hidden");
+    })
+
+    questionContainer.classList.add("hidden");
+    nextbtn.classList.add("hidden");
+    scoreText.innerText = `Final Score: ${score}`;
+    scoreText.classList.remove("hidden");
+    
+    return;
+  }
+
+  //Set text of the question to the current question being displayed from Data array
+  questionContainer.innerText = data[index].question;
+  //Set text of each answer button to be equal to the corresponding Array answer
   choiceOne.innerText = data[index].answers[0];
   choiceTwo.innerText = data[index].answers[1];
   choiceThree.innerText = data[index].answers[2];
   choiceFour.innerText = data[index].answers[3];
-
+//Loop through answer buttons and remove the event listeners from each button
   answerButtons.forEach((button) => {
     button.removeEventListener("click", checkAnswerWrapper);
     button.addEventListener("click", checkAnswerWrapper);
   });
-
+//Cycle through the index
   index++;
 }
 
+//Reset game by reloading the page
 function resetGame() {
-  score = 0;
-  currentQuestionIndex = 0;
-  answerMessage.innerText = "";
-  scoreText.innerText = `Score: ${score}`;
-  answerButtons.forEach((bttn) => {
-    bttn.classList.remove("selected");
-  });
-  startQuiz();
+  location.reload();
 }

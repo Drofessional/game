@@ -26,15 +26,15 @@ The game will have a leaderboard that displays the top scores from all players. 
 
 #### MVP Goals
 
-- As a player, I would like to be able to input name when first starting the game
 - As a player, I want my game to show 4 potential answers for the question that is displayed.
 - As a player, I want my game to show if the answer is correct or not after confirming choice with a click.
 - As a player, I want to track the users score after each question, adding more points for correct answers.
 - As a player, I want to have a button that enables restarting the game.
-- As a player, I would like to display a list of high scores of past players.
 
 #### Stretch Goals
 
+- As a player, I would like to display a list of high scores of past players.
+- As a player, I would like to be able to input name when first starting the game
 - As a player, I would like to have varying levels of difficulty that can be chosen at the start
 - As a player, I would like implement a timer to force an answer within 60 seconds of seeing the question
 - As a player, I would like a victory animation if I attain a new high score
