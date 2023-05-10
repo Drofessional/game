@@ -14,34 +14,47 @@ let choiceFour = document.querySelector(".answerbtn-D");
 let index = 0;
 let score = 0;
 let quizData = [];
+let playerName;
+
 
 
 //importing Question data from JSON :: remember to add type="module" to script tag
-import data from './data.json' assert{type:"json"};
+import data from './data.json' assert{type: "json"};
 
 //Added event listeners to Start, Next, and Reset Buttons
+window.onload = function(){
 startbtn.addEventListener("click", startQuiz);
-nextbtn.addEventListener("click", () => nextQuestion);
+nextbtn.addEventListener("click", () => nextQuestion());
 resetButton.addEventListener("click", resetGame);
-
+}
 //Shuffle function to randomize the array questions
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
-
+console.log(playerName);
 //StartQuiz function, hides Start and unhides Next/Answers/Reset/Question divs
 function startQuiz() {
   // Get the number of questions from the input
   let numQuestions = document.getElementById('numQuestions').value;
+  // Get the player's name from the input
+  playerName = document.getElementById('username').value;
+  // If no input was provided, default to 'Player'
+if (playerName === "") {
+  playerName = "Player";
+}
+//Call updateScore to set player Name for initial question
+updateScore();
   // If no input was provided, default to 10 questions
-  if(numQuestions === "") {
+  if (numQuestions === "") {
     numQuestions = 10;
   }
-  // Hide the number of questions input
+  // Hide the number of questions and username inputs
   document.getElementById('numQuestions').classList.add('hidden');
+  document.getElementById('username').classList.add('hidden');
+  console.log(playerName);
   // Validate the number of questions
   if (numQuestions > data.length) {
     alert("The number of questions cannot be more than the total number of questions available.");
@@ -50,7 +63,7 @@ function startQuiz() {
   //Shuffle questions
   shuffleArray(data);
   //truncate data to first 10 questions
-  quizData = data.slice(0,numQuestions);
+  quizData = data.slice(0, numQuestions);
   startbtn.classList.add("hidden");
   nextbtn.classList.remove("hidden");
   //Loops through each button to remove all 4 buttons instead of just 1
@@ -70,13 +83,14 @@ function checkAnswer(clickedAnswer, correctAnswer) {
   if (clickedAnswer.innerText === correctAnswer) {
     // answerMessage.innerText = "Correct!";
     clickedAnswer.classList.add("correct");
-    score+=100;
-  //Check if clicked is the wrong answer, then change the innerText of answerMessage accordingly
+    score += 100;
+    //Check if clicked is the wrong answer, then change the innerText of answerMessage accordingly
   } else {
     // answerMessage.innerText = "Incorrect!";
     clickedAnswer.classList.add("incorrect");
-    score-=100
+    score -= 100
   }
+  updateScore();
   //Move on to next Question
   setTimeout(() => {
     clickedAnswer.classList.remove("correct");
@@ -85,7 +99,13 @@ function checkAnswer(clickedAnswer, correctAnswer) {
   }, 300);
 }
 
-  //Lets the program know quiz isn't finished
+//update the ScoreText during the game
+function updateScore() {
+  scoreText.innerText = `${playerName}'s Score: ${score}`;
+  scoreText.classList.remove("hidden");
+}
+
+//Lets the program know quiz isn't finished
 let quizFinished = false;
 
 //Function is called when user clicks on one of the answer options for the current question
@@ -101,6 +121,8 @@ function checkAnswerWrapper(e) {
 function nextQuestion() {
   //Establish that index will only go up to 10 questions
   if (index === quizData.length) {
+    // Display the player's name next to their score
+    scoreText.innerText = `${playerName}'s Final Score: ${score}`;
     // Quiz finished, reset index, and display final score or any other actions you want to perform
     quizFinished = true;
     index = 0;
@@ -117,9 +139,8 @@ function nextQuestion() {
 
     questionContainer.classList.add("hidden");
     nextbtn.classList.add("hidden");
-    scoreText.innerText = `Final Score: ${score}`;
     scoreText.classList.remove("hidden");
-    
+
     return;
   }
 
@@ -130,12 +151,12 @@ function nextQuestion() {
   choiceTwo.innerText = data[index].answers[1];
   choiceThree.innerText = data[index].answers[2];
   choiceFour.innerText = data[index].answers[3];
-//Loop through answer buttons and remove the event listeners from each button
+  //Loop through answer buttons and remove the event listeners from each button
   answerButtons.forEach((button) => {
     button.removeEventListener("click", checkAnswerWrapper);
     button.addEventListener("click", checkAnswerWrapper);
   });
-//Cycle through the index
+  //Cycle through the index
   index++;
 }
 
