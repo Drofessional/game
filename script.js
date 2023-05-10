@@ -24,8 +24,18 @@ startbtn.addEventListener("click", startQuiz);
 nextbtn.addEventListener("click", nextQuestion);
 resetButton.addEventListener("click", resetGame);
 
+//Shuffle function to randomize the array questions
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 //StartQuiz function, hides Start and unhides Next/Answers/Reset/Question divs
 function startQuiz() {
+  //Shuffle questions
+  shuffleArray(data);
   startbtn.classList.add("hidden");
   nextbtn.classList.remove("hidden");
   //Loops through each button to remove all 4 buttons instead of just 1
