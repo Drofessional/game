@@ -10,6 +10,9 @@ let choiceOne = document.querySelector(".answerbtn-A");
 let choiceTwo = document.querySelector(".answerbtn-B");
 let choiceThree = document.querySelector(".answerbtn-C");
 let choiceFour = document.querySelector(".answerbtn-D");
+//Variables for Sounds
+let correctSound = new Audio('correct.mp3');
+let incorrectSound = new Audio('incorrect.mp3');
 //Set starting index and score to 0
 let index = 0;
 let score = 0;
@@ -22,10 +25,10 @@ let playerName;
 import data from './data.json' assert{type: "json"};
 
 //Added event listeners to Start, Next, and Reset Buttons
-window.onload = function(){
-startbtn.addEventListener("click", startQuiz);
-nextbtn.addEventListener("click", () => nextQuestion());
-resetButton.addEventListener("click", resetGame);
+window.onload = function () {
+  startbtn.addEventListener("click", startQuiz);
+  nextbtn.addEventListener("click", () => nextQuestion());
+  resetButton.addEventListener("click", resetGame);
 }
 //Shuffle function to randomize the array questions
 function shuffleArray(array) {
@@ -34,21 +37,21 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-console.log(playerName);
+
 //StartQuiz function, hides Start and unhides Next/Answers/Reset/Question divs
 function startQuiz() {
-  // Get the number of questions from the input
-  let numQuestions = document.getElementById('numQuestions').value;
-  // Get the player's name from the input
-  playerName = document.getElementById('username').value;
-  // If no input was provided, default to 'Player'
-if (playerName === "") {
-  playerName = "Player";
-}
-//Call updateScore to set player Name for initial question
-updateScore();
-  // If no input was provided, default to 10 questions
-  if (numQuestions === "") {
+
+  let numQuestions = document.getElementById('numQuestions').value;  // Get the number of questions from the input
+
+  playerName = document.getElementById('username').value; // Get the player's name from the input
+
+  if (playerName === "") {  // If no input was provided, default to 'Player'
+    playerName = "Player";
+  }
+
+  updateScore(); //Call updateScore to set player Name for initial question
+
+  if (numQuestions === "") {  // If no input was provided, default to 10 questions
     numQuestions = 10;
   }
   // Hide the number of questions and username inputs
@@ -60,35 +63,35 @@ updateScore();
     alert("The number of questions cannot be more than the total number of questions available.");
     return;
   }
-  //Shuffle questions
-  shuffleArray(data);
-  //truncate data to first 10 questions
-  quizData = data.slice(0, numQuestions);
+
+  shuffleArray(data); //Shuffle questions
+
+  quizData = data.slice(0, numQuestions); //truncate data to first 10 questions
   startbtn.classList.add("hidden");
   nextbtn.classList.remove("hidden");
-  //Loops through each button to remove all 4 buttons instead of just 1
-  answerButtons.forEach((bttn) => {
+
+  answerButtons.forEach((bttn) => {  //Loops through each button to remove all 4 buttons instead of just 1
     bttn.classList.remove("hidden");
   });
   resetButton.classList.remove("hidden");
   questionContainer.classList.remove("hidden");
-  //Call nextQuestion function after removing hidden classes to display first question
-  nextQuestion();
+
+  nextQuestion(); //Call nextQuestion function after removing hidden classes to display first question
 }
 
 // Function to check if answer is correct
 // Pass clickedAnswer and correctAnswer through the function
 function checkAnswer(clickedAnswer, correctAnswer) {
-  //Check if Clicked = the correct Answer, then change the innerText of answerMessage accordingly
-  if (clickedAnswer.innerText === correctAnswer) {
-    // answerMessage.innerText = "Correct!";
+
+  if (clickedAnswer.innerText === correctAnswer) {   //Check if Clicked = the correct Answer, then change the innerText of answerMessage accordingly
     clickedAnswer.classList.add("correct");
     score += 100;
-    //Check if clicked is the wrong answer, then change the innerText of answerMessage accordingly
-  } else {
-    // answerMessage.innerText = "Incorrect!";
+    correctSound.play();
+
+  } else { //Check if clicked is the wrong answer, then change the innerText of answerMessage accordingly
     clickedAnswer.classList.add("incorrect");
     score -= 100
+    incorrectSound.play();
   }
   updateScore();
   //Move on to next Question
@@ -105,36 +108,35 @@ function updateScore() {
   scoreText.classList.remove("hidden");
 }
 
-//Lets the program know quiz isn't finished
-let quizFinished = false;
 
-//Function is called when user clicks on one of the answer options for the current question
-function checkAnswerWrapper(e) {
-  //If quiz finished is true, then stop the function
-  if (quizFinished) return;
-  //Calls check answer function on the text of the answer option and the correct answer for the question
-  checkAnswer(e.target, quizData[index - 1]?.correctAnswer);
+let quizFinished = false; //Lets the program know quiz isn't finished
+
+
+function checkAnswerWrapper(e) { //Function is called when user clicks on one of the answer options for the current question
+
+  if (quizFinished) return; //If quiz finished is true, then stop the function
+
+  checkAnswer(e.target, quizData[index - 1]?.correctAnswer); //Calls check answer function on the text of the answer option and the correct answer for the question
 }
 
 
 //Function for displaying next question
 function nextQuestion() {
-  //Establish that index will only go up to 10 questions
-  if (index === quizData.length) {
-    // Display the player's name next to their score
-    scoreText.innerText = `${playerName}'s Final Score: ${score}`;
+
+  if (index === quizData.length) { //Establish that index will only go up to 10 questions
+
+    scoreText.innerText = `${playerName}'s Final Score: ${score}`;    // Display the player's name next to their score
     // Quiz finished, reset index, and display final score or any other actions you want to perform
     quizFinished = true;
     index = 0;
-    // You can also remove the event listeners here, if you want
     answerButtons.forEach((button) => {
       button.removeEventListener("click", checkAnswerWrapper);
       button.classList.remove("hidden");
-    displayHighscores();
-  return;
+      displayHighscores();
+      return;
     });
 
-    //This code will hide everything but your score when the quiz is over
+    //This code will hide everything but score when the quiz is over
     answerButtons.forEach((button) => {
       button.classList.add("hidden");
     })
@@ -146,20 +148,19 @@ function nextQuestion() {
     return;
   }
 
-  //Set text of the question to the current question being displayed from Data array
-  questionContainer.innerText = data[index].question;
+
+  questionContainer.innerText = data[index].question; //Set text of the question to the current question being displayed from Data array
   //Set text of each answer button to be equal to the corresponding Array answer
   choiceOne.innerText = data[index].answers[0];
   choiceTwo.innerText = data[index].answers[1];
   choiceThree.innerText = data[index].answers[2];
   choiceFour.innerText = data[index].answers[3];
-  //Loop through answer buttons and remove the event listeners from each button
-  answerButtons.forEach((button) => {
+
+  answerButtons.forEach((button) => { //Loop through answer buttons and remove the event listeners from each button
     button.removeEventListener("click", checkAnswerWrapper);
     button.addEventListener("click", checkAnswerWrapper);
   });
-  //Cycle through the index
-  index++;
+  index++; //Cycle through the index
 }
 
 //Function to display High Scores
