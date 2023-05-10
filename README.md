@@ -16,11 +16,11 @@ The game will have a leaderboard that displays the top scores from all players. 
 
 **Initial Landing View**
 
-![image](/initialwireframe.png)
+(/initialwireframe.png)
 
 **Results View**
 
-![image](/winnerwireframe.png)
+(/winnerwireframe.png)
 
 ## User Stories
 

@@ -2,7 +2,6 @@
 let startbtn = document.querySelector(".startbtn");
 let questionContainer = document.querySelector(".question-container");
 let nextbtn = document.querySelector(".nextButton");
-let answerMessage = document.querySelector(".answer");
 let scoreText = document.querySelector(".score");
 let resetButton = document.querySelector(".resetbtn");
 let answerButtons = document.querySelectorAll(".answerbtn");
@@ -14,6 +13,7 @@ let choiceFour = document.querySelector(".answerbtn-D");
 //Set starting index and score to 0
 let index = 0;
 let score = 0;
+let quizData = [];
 
 
 //importing Question data from JSON :: remember to add type="module" to script tag
@@ -36,6 +36,8 @@ function shuffleArray(array) {
 function startQuiz() {
   //Shuffle questions
   shuffleArray(data);
+  //truncate data to first 10 questions
+  quizData = data.slice(0,10);
   startbtn.classList.add("hidden");
   nextbtn.classList.remove("hidden");
   //Loops through each button to remove all 4 buttons instead of just 1
@@ -56,18 +58,19 @@ function checkAnswer(clickedAnswer, correctAnswer) {
   if (clickedAnswer.innerText === correctAnswer) {
     // answerMessage.innerText = "Correct!";
     clickedAnswer.classList.add("correct");
-    score++;
+    score+=100;
   //Check if clicked is the wrong answer, then change the innerText of answerMessage accordingly
   } else {
     // answerMessage.innerText = "Incorrect!";
     clickedAnswer.classList.add("incorrect");
+    score-=100
   }
   //Move on to next Question
   setTimeout(() => {
     clickedAnswer.classList.remove("correct");
     clickedAnswer.classList.remove("incorrect");
     nextQuestion()
-  }, 500);
+  }, 300);
 }
 
   //Lets the program know quiz isn't finished
@@ -83,8 +86,8 @@ function checkAnswerWrapper(e) {
 
 //Function for displaying next question
 function nextQuestion() {
-  //check if Index is equal to length of the array
-  if (index === data.length) {
+  //Establish that index will only go up to 10 questions
+  if (index === 10) {
     // Quiz finished, reset index, and display final score or any other actions you want to perform
     quizFinished = true;
     index = 0;

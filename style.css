@@ -144,3 +144,18 @@ body{
   .incorrect {
     background-color: red;
   }
+
+  .user-input {
+    margin: 20px;
+  }
+  
+  #username-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #username {
+    margin: 10px;
+  }
+  
