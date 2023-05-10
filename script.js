@@ -36,6 +36,10 @@ function shuffleArray(array) {
 function startQuiz() {
   // Get the number of questions from the input
   let numQuestions = document.getElementById('numQuestions').value;
+  // If no input was provided, default to 10 questions
+  if(numQuestions === "") {
+    numQuestions = 10;
+  }
   // Hide the number of questions input
   document.getElementById('numQuestions').classList.add('hidden');
   // Validate the number of questions
