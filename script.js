@@ -21,7 +21,7 @@ import data from './data.json' assert{type:"json"};
 
 //Added event listeners to Start, Next, and Reset Buttons
 startbtn.addEventListener("click", startQuiz);
-nextbtn.addEventListener("click", nextQuestion);
+nextbtn.addEventListener("click", () => nextQuestion);
 resetButton.addEventListener("click", resetGame);
 
 //Shuffle function to randomize the array questions
@@ -53,15 +53,21 @@ function startQuiz() {
 function checkAnswer(clickedAnswer, correctAnswer) {
 
   //Check if Clicked = the correct Answer, then change the innerText of answerMessage accordingly
-  if (clickedAnswer === correctAnswer) {
-    answerMessage.innerText = "Correct!";
+  if (clickedAnswer.innerText === correctAnswer) {
+    // answerMessage.innerText = "Correct!";
+    clickedAnswer.classList.add("correct");
     score++;
   //Check if clicked is the wrong answer, then change the innerText of answerMessage accordingly
   } else {
-    answerMessage.innerText = "Incorrect!";
+    // answerMessage.innerText = "Incorrect!";
+    clickedAnswer.classList.add("incorrect");
   }
   //Move on to next Question
-  nextQuestion();
+  setTimeout(() => {
+    clickedAnswer.classList.remove("correct");
+    clickedAnswer.classList.remove("incorrect");
+    nextQuestion()
+  }, 500);
 }
 
   //Lets the program know quiz isn't finished
@@ -72,7 +78,7 @@ function checkAnswerWrapper(e) {
   //If quiz finished is true, then stop the function
   if (quizFinished) return;
   //Calls check answer function on the text of the answer option and the correct answer for the question
-  checkAnswer(e.target.innerText, data[index - 1]?.correctAnswer);
+  checkAnswer(e.target, data[index - 1]?.correctAnswer);
 }
 
 //Function for displaying next question
