@@ -5,6 +5,7 @@ body{
     height: 100vh;    
     background: grey;
     font-family: 'Courier New', Courier, monospace;
+    background-image: linear-gradient(to bottom right, rgb(2, 45, 30), grey, purple);
     }
 
 .hidden {
@@ -60,7 +61,10 @@ body{
     position: relative;
     background-color: transparent;
     text-decoration: none;
+    width: 200px;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
     z-index: 1;
     font-family: inherit;
     border-radius: 10px;
@@ -104,8 +108,8 @@ body{
     border-radius: 10px;
    }
    
-   .startbtn {
-    background-color: #4CAF50; /* Green */
+   .startbtn{
+    background-color: blue; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -137,6 +141,30 @@ body{
     margin-bottom: 16px;
    }
 
+   .resetbtn {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+   }
+
+   .reset-highscores-btn {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+   }
+
    .correct {
     background-color: green;
   }
@@ -150,15 +178,38 @@ body{
   }
   
   #username-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
   }
   
   #username {
-    margin: 10px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
   }
-  
-  .user-input {
-    margin: 20px;
+
+  #numQuestions {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  input::placeholder {
+    color: white
   }

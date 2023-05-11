@@ -102,7 +102,7 @@ function checkAnswer(clickedAnswer, correctAnswer) {
     clickedAnswer.classList.remove("correct");
     clickedAnswer.classList.remove("incorrect");
     nextQuestion()
-  }, 300);
+  }, 500);
 }
 
 //update the ScoreText during the game
