@@ -5,6 +5,7 @@ let nextbtn = document.querySelector(".nextButton");
 let scoreText = document.querySelector(".score");
 let resetButton = document.querySelector(".resetbtn");
 let answerButtons = document.querySelectorAll(".answerbtn");
+let resetHighscoresBtn = document.querySelector(".reset-highscores-btn");
 //Retrieve the answers buttons from the HTML document
 let choiceOne = document.querySelector(".answerbtn-A");
 let choiceTwo = document.querySelector(".answerbtn-B");
@@ -21,14 +22,16 @@ let playerName;
 
 
 
+
 //importing Question data from JSON :: remember to add type="module" to script tag
 import data from './data.json' assert{type: "json"};
 
-//Added event listeners to Start, Next, and Reset Buttons
+//Added event listeners to Start, Next, Reset, and ResetHighScores buttons
 window.onload = function () {
   startbtn.addEventListener("click", startQuiz);
   nextbtn.addEventListener("click", () => nextQuestion());
   resetButton.addEventListener("click", resetGame);
+  resetHighscoresBtn.addEventListener("click", resetHighscores);
 }
 //Shuffle function to randomize the array questions
 function shuffleArray(array) {
@@ -66,7 +69,7 @@ function startQuiz() {
 
   shuffleArray(data); //Shuffle questions
 
-  quizData = data.slice(0, numQuestions); //truncate data to first 10 questions
+  quizData = data.slice(0, numQuestions); //truncate data to first length of numQuestions input
   startbtn.classList.add("hidden");
   nextbtn.classList.remove("hidden");
 
@@ -173,9 +176,18 @@ function displayHighscores() {
     li.textContent = `${highscore.player}: ${highscore.score}`;
     highscoreList.appendChild(li);
   }
+  if (highscores.length > 0) {
+    resetHighscoresBtn.classList.remove("hidden");
+} else {
+    resetHighscoresBtn.classList.add("hidden");
+}
   document.getElementById('highscore-list').classList.remove('hidden');
 }
 
+function resetHighscores() {
+  localStorage.removeItem("highscores");
+  location.reload();
+}
 
 //Reset game by reloading the page
 function resetGame() {
