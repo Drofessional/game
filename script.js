@@ -14,7 +14,7 @@ let choiceFour = document.querySelector(".answerbtn-D");
 //Variables for Sounds
 let correctSound = new Audio('correct.mp3');
 let incorrectSound = new Audio('incorrect.mp3');
-//Set starting index and score to 0
+//Declare Variables that I will need to use later
 let index = 0;
 let score = 0;
 let quizData = [];
@@ -52,15 +52,15 @@ function startQuiz() {
     playerName = "Player";
   }
 
-  updateScore(); //Call updateScore to set player Name for initial question
-
   if (numQuestions === "") {  // If no input was provided, default to 10 questions
     numQuestions = 10;
   }
+
+  updateScore(); //Call updateScore to set player Name for initial question
+
   // Hide the number of questions and username inputs
   document.getElementById('numQuestions').classList.add('hidden');
   document.getElementById('username').classList.add('hidden');
-  console.log(playerName);
   // Validate the number of questions
   if (numQuestions > data.length) {
     alert("The number of questions cannot be more than the total number of questions available.");
@@ -70,14 +70,15 @@ function startQuiz() {
   shuffleArray(data); //Shuffle questions
 
   quizData = data.slice(0, numQuestions); //truncate data to first length of numQuestions input
-  startbtn.classList.add("hidden");
-  nextbtn.classList.remove("hidden");
 
-  answerButtons.forEach((bttn) => {  //Loops through each button to remove all 4 buttons instead of just 1
+  startbtn.classList.add("hidden"); //Hide the Start Button
+  nextbtn.classList.remove("hidden"); //Unhide the Next/Skip Button
+
+  answerButtons.forEach((bttn) => {  //Loops through each button to unhide all 4 buttons instead of just 1
     bttn.classList.remove("hidden");
   });
   resetButton.classList.remove("hidden");
-  questionContainer.classList.remove("hidden");
+  questionContainer.classList.remove("hidden"); //Unhide the container that holds the question
 
   nextQuestion(); //Call nextQuestion function after removing hidden classes to display first question
 }
@@ -87,21 +88,21 @@ function startQuiz() {
 function checkAnswer(clickedAnswer, correctAnswer) {
 
   if (clickedAnswer.innerText === correctAnswer) {   //Check if Clicked = the correct Answer, then change the innerText of answerMessage accordingly
-    clickedAnswer.classList.add("correct");
-    score += 100;
-    correctSound.play();
+    clickedAnswer.classList.add("correct"); //Adds color
+    score += 100; //Adds Score
+    correctSound.play(); //Plays affirmative sound for correct
 
   } else { //Check if clicked is the wrong answer, then change the innerText of answerMessage accordingly
-    clickedAnswer.classList.add("incorrect");
-    score -= 100
-    incorrectSound.play();
+    clickedAnswer.classList.add("incorrect"); //Removes color
+    score -= 100 //Reduces Score
+    incorrectSound.play(); //Plays buzzer sound for incorrect
   }
-  updateScore();
-  //Move on to next Question
-  setTimeout(() => {
-    clickedAnswer.classList.remove("correct");
-    clickedAnswer.classList.remove("incorrect");
-    nextQuestion()
+  updateScore(); //Updates the value of the score
+
+  setTimeout(() => { //Adds a timed delay of 500ms before moving to next question so server has time to respond
+    clickedAnswer.classList.remove("correct"); //Clears color from button
+    clickedAnswer.classList.remove("incorrect"); //Clears color from button
+    nextQuestion() //Loads next question
   }, 500);
 }
 
@@ -111,14 +112,11 @@ function updateScore() {
   scoreText.classList.remove("hidden");
 }
 
-
 let quizFinished = false; //Lets the program know quiz isn't finished
 
-
+//This function makes sure that the Check Answer function is not called if Player reaches the end of the questions
 function checkAnswerWrapper(e) { //Function is called when user clicks on one of the answer options for the current question
-
   if (quizFinished) return; //If quiz finished is true, then stop the function
-
   checkAnswer(e.target, quizData[index - 1]?.correctAnswer); //Calls check answer function on the text of the answer option and the correct answer for the question
 }
 
@@ -129,7 +127,7 @@ function nextQuestion() {
   if (index === quizData.length) { //Establish that index will only go up to 10 questions
 
     scoreText.innerText = `${playerName}'s Final Score: ${score}`;    // Display the player's name next to their score
-    // Quiz finished, reset index, and display final score or any other actions you want to perform
+    // Quiz is finished, set index back to 0, hide the buttons, show the high scores
     quizFinished = true;
     index = 0;
     answerButtons.forEach((button) => {
@@ -143,7 +141,6 @@ function nextQuestion() {
     answerButtons.forEach((button) => {
       button.classList.add("hidden");
     })
-
     questionContainer.classList.add("hidden");
     nextbtn.classList.add("hidden");
     scoreText.classList.remove("hidden");
@@ -168,33 +165,32 @@ function nextQuestion() {
 
 //Function to display High Scores
 function displayHighscores() {
-  let highscores = JSON.parse(localStorage.getItem('highscores')) || [];
-  let highscoreList = document.getElementById('highscores');
+  let highscores = JSON.parse(localStorage.getItem('highscores')) || []; //retrieve high scores from localStorage and parse to convert from string to array
+  let highscoreList = document.getElementById('highscores'); //Assigns value of highscores div to highscoreList variable
   highscoreList.innerHTML = '';  // Clear the list
-  for (let highscore of highscores) {
-    let li = document.createElement('li');
-    li.textContent = `${highscore.player}: ${highscore.score}`;
-    highscoreList.appendChild(li);
+  for (let highscore of highscores) { //iterate through all the highscore in highscores array
+    let li = document.createElement('li'); //create new list item element 'li'
+    li.textContent = `${highscore.player}: ${highscore.score}`; //sets text of li so it shows the player's name and score on the list
+    highscoreList.appendChild(li); //appends the 'li' element to the highscorelist
   }
-  if (highscores.length > 0) {
+  if (highscores.length > 0) { //Check to make sure there is high score on the list, if none then hide the list.
     resetHighscoresBtn.classList.remove("hidden");
   } else {
     resetHighscoresBtn.classList.add("hidden");
   }
-  document.getElementById('highscore-list').classList.remove('hidden');
+  document.getElementById('highscore-list').classList.remove('hidden'); //Unhide the highscore list if there is high scores available
 }
 
-function resetHighscores() {
-  localStorage.removeItem("highscores");
-  location.reload();
+function resetHighscores() { //Reset the high score list using resetHighScores function called when Reset High Scores button is clicked
+  localStorage.removeItem("highscores"); //removes items with key 'highscores" from local storage
+  location.reload(); //Reloads the page
 }
 
-//Reset game by reloading the page
-function resetGame() {
-  let highscores = JSON.parse(localStorage.getItem('highscores')) || [];
-  highscores.push({ player: playerName, score: score });
-  highscores.sort((a, b) => b.score - a.score);
-  highscores = highscores.slice(0, 10);  // Keep only top 10 scores
-  localStorage.setItem('highscores', JSON.stringify(highscores));
-  location.reload();
+function resetGame() { //function for resetting the game
+  let highscores = JSON.parse(localStorage.getItem('highscores')) || []; //retrieve high scores and convert it to an array then assign to highscores variable
+  highscores.push({ player: playerName, score: score }); //add new high score entry to the highscores array
+  highscores.sort((a, b) => b.score - a.score); //Sort the scores in order of highest to lowest
+  highscores = highscores.slice(0, 10);  // Keep only top 10 scores 
+  localStorage.setItem('highscores', JSON.stringify(highscores)); //feed updated highscores array into the local storage
+  location.reload(); //reload the page
 }
