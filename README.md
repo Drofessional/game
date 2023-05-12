@@ -1,43 +1,18 @@
-# Project Proposal
+☐ Title: History Trivia
 
-## Project Choice (Tell us which project you're doing!)
+☐ Screenshot(s): 
+Start Screen:
+![Image](StartScreen.png)
 
-- [X] Trivia (Self-scoring)
+Questions:
+![Image](QuestionScreen.png)
 
-## Project Description 
+High Score Screen:
+![Image](HighScore.png)
 
-My Trivia Game is a web-based game that challenges players with a series of questions from various categories, such as sports, entertainment, history, science, and more. The game has a simple and intuitive interface that allows players to easily navigate through different categories, select answers, and track their score.
+☐ Technologies Used: HTML, CSS, Javascript, JSON
 
-Players start the game by choosing a category and then answering a set of multiple-choice questions within a specific time limit. The game will provide instant feedback on each question, indicating whether the answer was correct or incorrect. If the player answers correctly, their score will increase, and they will move on to the next question in the category. If the player answers incorrectly, the game will deduct points, and the player will have to try again.
+☐ Getting Started: https://thriving-sfogliatella-d0b989.netlify.app/
+To play the game, start by inputting your name and how many questions you would like in your quiz. After clicking start, the questions will display with four options, choose the option you believe is correct and continue doing so until the quiz question set is finished. At the end, the current High Score List will appear and your score will appear. If your quiz score is higher then the top 10, it will be added to the scoreboard for future games. If you would like to play the game again, simply click the Reset Game button to return to the beginning.
 
-The game will have a leaderboard that displays the top scores from all players. The player with the highest score will be on top of the leaderboard. The game will also include a timer that counts down the remaining time for each question, adding an extra level of excitement and challenge.
-
-## Wire Frames
-
-**Initial Landing View**
-
-(/initialwireframe.png)
-
-**Results View**
-
-(/winnerwireframe.png)
-
-## User Stories
-
-#### MVP Goals
-
-- As a player, I want my game to show 4 potential answers for the question that is displayed.
-- As a player, I want my game to show if the answer is correct or not after confirming choice with a click.
-- As a player, I want to track the users score after each question, adding more points for correct answers.
-- As a player, I want to have a button that enables restarting the game.
-
-#### Stretch Goals
-
-- As a player, I would like to display a list of high scores of past players.
-- As a player, I would like to be able to input name when first starting the game
-- As a player, I would like to have varying levels of difficulty that can be chosen at the start
-- As a player, I would like implement a timer to force an answer within 60 seconds of seeing the question
-- As a player, I would like a victory animation if I attain a new high score
-- As a player, I would like to hear an audible sound when I mark a game box so that I know my selection worked.
-- As a player, I would like to implement social media sharing functionality to allow users to share their scores or invite friends to play.
-- As a player, I would like to add multimedia elements, such as images or videos, to enhance the user experience.
+☐ Next Steps: I would like to improve the visual appearance of the game at a later date. Also would like to add categories to the quiz so that there is more then just history questions available. Possibly would also like to add a difficulty functionality that will enable the player to choose how difficult the questions displayed will be.

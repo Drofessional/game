@@ -1,481 +1,365 @@
 [
-    {
-      "question": "What was the largest empire in history?",
-      "answers": [
-        "Roman Empire",
-        "British Empire",
-        "Mongol Empire",
-        "Ottoman Empire"
-      ],
-      "correctAnswer": "Mongol Empire"
-    },
-    {
-      "question": "Who was the first President of the United States?",
-      "answers": [
-        "Thomas Jefferson",
-        "George Washington",
-        "John Adams",
-        "Abraham Lincoln"
-      ],
-      "correctAnswer": "George Washington"
-    },
-    {
-      "question": "What was the main cause of World War I?",
-      "answers": [
-        "Nationalism",
-        "Imperialism",
-        "Militarism",
-        "All of the above"
-      ],
-      "correctAnswer": "All of the above"
-    },
-    {
-      "question": "Who invented the telephone?",
-      "answers": [
-        "Alexander Graham Bell",
-        "Thomas Edison",
-        "Nikola Tesla",
-        "Guglielmo Marconi"
-      ],
-      "correctAnswer": "Alexander Graham Bell"
-    },
-    {
-      "question": "What was the Renaissance?",
-      "answers": [
-        "A period of artistic and intellectual revival",
-        "A political movement",
-        "A religious revolution",
-        "A social movement"
-      ],
-      "correctAnswer": "A period of artistic and intellectual revival"
-    },
-    {
-      "question": "In what year did World War I begin?",
-      "answers": [
-        "1914",
-        "1915",
-        "1916",
-        "1917"
-      ],
-      "correctAnswer": "1914"
-    },
-    {
-      "question": "What was the first civilization to develop writing?",
-      "answers": [
-        "Egyptians",
-        "Sumerians",
-        "Mayans",
-        "Chinese"
-      ],
-      "correctAnswer": "Sumerians"
-    },
-    {
-      "question": "Who was the first emperor of Rome?",
-      "answers": [
-        "Julius Caesar",
-        "Augustus",
-        "Nero",
-        "Constantine"
-      ],
-      "correctAnswer": "Augustus"
-    },
-    {
-      "question": "Which two countries were involved in the Hundred Years' War?",
-      "answers": [
-        "France and England",
-        "Spain and Portugal",
-        "Italy and Germany",
-        "Russia and Sweden"
-      ],
-      "correctAnswer": "France and England"
-    },
-    {
-      "question": "What is the Magna Carta?",
-      "answers": [
-        "A treaty signed between France and England",
-        "A religious text",
-        "A document outlining the rights of English citizens",
-        "A code of laws"
-      ],
-      "correctAnswer": "A document outlining the rights of English citizens"
-    },
-    {
-      "question": "Who was the first European explorer to reach India by sea?",
-      "answers": [
-        "Christopher Columbus",
-        "Ferdinand Magellan",
-        "Vasco da Gama",
-        "John Cabot"
-      ],
-      "correctAnswer": "Vasco da Gama"
-    },
-    {
-      "question": "What was the name of the first successful powered airplane?",
-      "answers": [
-        "Wright Flyer",
-        "Spirit of St. Louis",
-        "Red Baron",
-        "Bleriot XI"
-      ],
-      "correctAnswer": "Wright Flyer"
-    },
-    {
-      "question": "Who was the first female prime minister of a country?",
-      "answers": [
-        "Golda Meir",
-        "Indira Gandhi",
-        "Margaret Thatcher",
-        "Benazir Bhutto"
-      ],
-      "correctAnswer": "Sirimavo Bandaranaike"
-    },
-    {
-      "question": "What was the name of the first satellite launched into space?",
-      "answers": [
-        "Vanguard 1",
-        "Sputnik 1",
-        "Explorer 1",
-        "Telstar 1"
-      ],
-      "correctAnswer": "Sputnik 1"
-    },
-    {
-      "question": "Who discovered penicillin?",
-      "answers": [
-        "Alexander Fleming",
-        "Marie Curie",
-        "Albert Einstein",
-        "Isaac Newton"
-      ],
-      "correctAnswer": "Alexander Fleming"
-    },
-    {
-      "question": "What was the first animal to be sent into space?",
-      "answers": [
-        "Dog",
-        "Monkey",
-        "Cat",
-        "Mouse"
-      ],
-      "correctAnswer": "Dog"
-    },
-    {
-      "question": "Who painted the Mona Lisa?",
-      "answers": [
-        "Leonardo da Vinci",
-        "Michelangelo",
-        "Raphael",
-        "Vincent van Gogh"
-      ],
-      "correctAnswer": "Leonardo da Vinci"
-    },
-    {
-      "question": "Who is known as the 'Father of History'?",
-      "answers": [
-        "Herodotus",
-        "Socrates",
-        "Plato",
-        "Aristotle"
-      ],
-      "correctAnswer": "Herodotus"
-    },
-    {
-      "question": "Which country was first to industrialize?",
-      "answers": [
-        "United States",
-        "Germany",
-        "England",
-        "France"
-      ],
-      "correctAnswer": "England"
-    },
-    {
-      "question": "What was the capital of the ancient Persia?",
-      "answers": [
-        "Babylon",
-        "Persepolis",
-        "Nineveh",
-        "Alexandria"
-      ],
-      "correctAnswer": "Persepolis"
-    },
-    {
-      "question": "Who was the last Pharaoh of Egypt?",
-      "answers": [
-        "Tutankhamun",
-        "Cleopatra",
-        "Ramses II",
-        "Nefertiti"
-      ],
-      "correctAnswer": "Cleopatra"
-    },
-    {
-      "question": "What civilization built Machu Picchu?",
-      "answers": [
-        "Aztec",
-        "Inca",
-        "Maya",
-        "Olmec"
-      ],
-      "correctAnswer": "Inca"
-    },
-    {
-      "question": "What was the language of ancient Rome?",
-      "answers": [
-        "Latin",
-        "Greek",
-        "Italian",
-        "Spanish"
-      ],
-      "correctAnswer": "Latin"
-    },
-    {
-      "question": "What is the oldest known city in the world?",
-      "answers": [
-        "Rome",
-        "Athens",
-        "Jerusalem",
-        "Jericho"
-      ],
-      "correctAnswer": "Jericho"
-    },
-    {
-      "question": "What was the Black Death?",
-      "answers": [
-        "A war",
-        "A famine",
-        "A plague",
-        "A flood"
-      ],
-      "correctAnswer": "A plague"
-    },
-    {
-      "question": "Who was the first emperor of China?",
-      "answers": [
-        "Confucius",
-        "Qin Shi Huang",
-        "Genghis Khan",
-        "Sun Tzu"
-      ],
-      "correctAnswer": "Qin Shi Huang"
-    },
-    {
-      "question": "In what century did the French Revolution take place?",
-      "answers": [
-        "17th Century",
-        "18th Century",
-        "19th Century",
-        "20th Century"
-      ],
-      "correctAnswer": "18th Century"
-    },
-    {
-      "question": "What year did Christopher Columbus discover America?",
-      "answers": [
-        "1492",
-        "1498",
-        "1500",
-        "1502"
-      ],
-      "correctAnswer": "1492"
-    },
-    {
-      "question": "What was the primary purpose of the Silk Road?",
-      "answers": [
-        "Religious pilgrimage",
-        "Trade and cultural exchange",
-        "Military conquest",
-        "Scientific exploration"
-      ],
-      "correctAnswer": "Trade and cultural exchange"
-    },
-    {
-      "question": "Where was the signing of the Declaration of Independence?",
-      "answers": [
-        "New York City, NY",
-        "Philadelphia, PA",
-        "Boston, MA",
-        "Richmond, VA"
-      ],
-      "correctAnswer": "Philadelphia, PA"
-    },
-    {
-      "question": "What is the oldest surviving civilization?",
-      "answers": [
-        "Egyptian Civilization",
-        "Indus Valley Civilization",
-        "Mesopotamian Civilization",
-        "Chinese Civilization"
-      ],
-      "correctAnswer": "Chinese Civilization"
-    },
-    {
-      "question": "Who was known as the Sun King?",
-      "answers": [
-        "King Louis XIV",
-        "King Louis XV",
-        "King Louis XVI",
-        "King Charles VII"
-      ],
-      "correctAnswer": "King Louis XIV"
-    },
-    {
-      "question": "Which war was fought between the north and south regions in the United States?",
-      "answers": [
-        "World War I",
-        "World War II",
-        "The Revolutionary War",
-        "The Civil War"
-      ],
-      "correctAnswer": "The Civil War"
-    },
-    {
-      "question": "Who was the longest-reigning monarch in British history?",
-      "answers": [
-        "Queen Victoria",
-        "Queen Elizabeth I",
-        "King George III",
-        "Queen Elizabeth II"
-      ],
-      "correctAnswer": "Queen Elizabeth II"
-    },
-    {
-      "question": "What historical event was the Titanic's maiden voyage?",
-      "answers": [
-        "The start of World War I",
-        "The sinking of the Lusitania",
-        "The creation of the Panama Canal",
-        "The completion of the Transcontinental Railroad"
-      ],
-      "correctAnswer": "The sinking of the Lusitania"
-    },
-    {
-      "question": "What was the name of the last Tsar of Russia?",
-      "answers": [
-        "Alexander II",
-        "Peter the Great",
-        "Nicholas II",
-        "Ivan the Terrible"
-      ],
-      "correctAnswer": "Nicholas II"
-    },
-    {
-      "question": "What famous document begins: 'When in the course of human events...'",
-      "answers": [
-        "The Constitution of the United States",
-        "The Declaration of Independence",
-        "The Gettysburg Address",
-        "The Magna Carta"
-      ],
-      "correctAnswer": "The Declaration of Independence"
-    },
-    {
-      "question": "Who was the first emperor of Japan?",
-      "answers": [
+  {
+    "question": "What was the largest empire in history?",
+    "answers": [
+      "Roman Empire",
+      "British Empire",
+      "Mongol Empire",
+      "Ottoman Empire"
+    ],
+    "correctAnswer": "Mongol Empire"
+  },
+  {
+    "question": "Who was the first President of the United States?",
+    "answers": [
+      "Thomas Jefferson",
+      "George Washington",
+      "John Adams",
+      "Abraham Lincoln"
+    ],
+    "correctAnswer": "George Washington"
+  },
+  {
+    "question": "What was the main cause of World War I?",
+    "answers": ["Nationalism", "Imperialism", "Militarism", "All of the above"],
+    "correctAnswer": "All of the above"
+  },
+  {
+    "question": "Who invented the telephone?",
+    "answers": [
+      "Alexander Graham Bell",
+      "Thomas Edison",
+      "Nikola Tesla",
+      "Guglielmo Marconi"
+    ],
+    "correctAnswer": "Alexander Graham Bell"
+  },
+  {
+    "question": "What was the Renaissance?",
+    "answers": [
+      "A period of artistic and intellectual revival",
+      "A political movement",
+      "A religious revolution",
+      "A social movement"
+    ],
+    "correctAnswer": "A period of artistic and intellectual revival"
+  },
+  {
+    "question": "In what year did World War I begin?",
+    "answers": ["1914", "1915", "1916", "1917"],
+    "correctAnswer": "1914"
+  },
+  {
+    "question": "What was the first civilization to develop writing?",
+    "answers": ["Egyptians", "Sumerians", "Mayans", "Chinese"],
+    "correctAnswer": "Sumerians"
+  },
+  {
+    "question": "Who was the first emperor of Rome?",
+    "answers": ["Julius Caesar", "Augustus", "Nero", "Constantine"],
+    "correctAnswer": "Augustus"
+  },
+  {
+    "question": "Which two countries were involved in the Hundred Years' War?",
+    "answers": [
+      "France and England",
+      "Spain and Portugal",
+      "Italy and Germany",
+      "Russia and Sweden"
+    ],
+    "correctAnswer": "France and England"
+  },
+  {
+    "question": "What is the Magna Carta?",
+    "answers": [
+      "A treaty signed between France and England",
+      "A religious text",
+      "A document outlining the rights of English citizens",
+      "A code of laws"
+    ],
+    "correctAnswer": "A document outlining the rights of English citizens"
+  },
+  {
+    "question": "Who was the first European explorer to reach India by sea?",
+    "answers": [
+      "Christopher Columbus",
+      "Ferdinand Magellan",
+      "Vasco da Gama",
+      "John Cabot"
+    ],
+    "correctAnswer": "Vasco da Gama"
+  },
+  {
+    "question": "What was the name of the first successful powered airplane?",
+    "answers": [
+      "Wright Flyer",
+      "Spirit of St. Louis",
+      "Red Baron",
+      "Bleriot XI"
+    ],
+    "correctAnswer": "Wright Flyer"
+  },
+  {
+    "question": "Who was the first female prime minister of a country?",
+    "answers": [
+      "Golda Meir",
+      "Indira Gandhi",
+      "Margaret Thatcher",
+      "Benazir Bhutto"
+    ],
+    "correctAnswer": "Sirimavo Bandaranaike"
+  },
+  {
+    "question": "What was the name of the first satellite launched into space?",
+    "answers": ["Vanguard 1", "Sputnik 1", "Explorer 1", "Telstar 1"],
+    "correctAnswer": "Sputnik 1"
+  },
+  {
+    "question": "Who discovered penicillin?",
+    "answers": [
+      "Alexander Fleming",
+      "Marie Curie",
+      "Albert Einstein",
+      "Isaac Newton"
+    ],
+    "correctAnswer": "Alexander Fleming"
+  },
+  {
+    "question": "What was the first animal to be sent into space?",
+    "answers": ["Dog", "Monkey", "Cat", "Mouse"],
+    "correctAnswer": "Dog"
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "answers": [
+      "Leonardo da Vinci",
+      "Michelangelo",
+      "Raphael",
+      "Vincent van Gogh"
+    ],
+    "correctAnswer": "Leonardo da Vinci"
+  },
+  {
+    "question": "Who is known as the 'Father of History'?",
+    "answers": ["Herodotus", "Socrates", "Plato", "Aristotle"],
+    "correctAnswer": "Herodotus"
+  },
+  {
+    "question": "Which country was first to industrialize?",
+    "answers": ["United States", "Germany", "England", "France"],
+    "correctAnswer": "England"
+  },
+  {
+    "question": "What was the capital of the ancient Persia?",
+    "answers": ["Babylon", "Persepolis", "Nineveh", "Alexandria"],
+    "correctAnswer": "Persepolis"
+  },
+  {
+    "question": "Who was the last Pharaoh of Egypt?",
+    "answers": ["Tutankhamun", "Cleopatra", "Ramses II", "Nefertiti"],
+    "correctAnswer": "Cleopatra"
+  },
+  {
+    "question": "What civilization built Machu Picchu?",
+    "answers": ["Aztec", "Inca", "Maya", "Olmec"],
+    "correctAnswer": "Inca"
+  },
+  {
+    "question": "What was the language of ancient Rome?",
+    "answers": ["Latin", "Greek", "Italian", "Spanish"],
+    "correctAnswer": "Latin"
+  },
+  {
+    "question": "What is the oldest known city in the world?",
+    "answers": ["Rome", "Athens", "Jerusalem", "Jericho"],
+    "correctAnswer": "Jericho"
+  },
+  {
+    "question": "What was the Black Death?",
+    "answers": ["A war", "A famine", "A plague", "A flood"],
+    "correctAnswer": "A plague"
+  },
+  {
+    "question": "Who was the first emperor of China?",
+    "answers": ["Confucius", "Qin Shi Huang", "Genghis Khan", "Sun Tzu"],
+    "correctAnswer": "Qin Shi Huang"
+  },
+  {
+    "question": "In what century did the French Revolution take place?",
+    "answers": ["17th Century", "18th Century", "19th Century", "20th Century"],
+    "correctAnswer": "18th Century"
+  },
+  {
+    "question": "What year did Christopher Columbus discover America?",
+    "answers": ["1492", "1498", "1500", "1502"],
+    "correctAnswer": "1492"
+  },
+  {
+    "question": "What was the primary purpose of the Silk Road?",
+    "answers": [
+      "Religious pilgrimage",
+      "Trade and cultural exchange",
+      "Military conquest",
+      "Scientific exploration"
+    ],
+    "correctAnswer": "Trade and cultural exchange"
+  },
+  {
+    "question": "Where was the signing of the Declaration of Independence?",
+    "answers": [
+      "New York City, NY",
+      "Philadelphia, PA",
+      "Boston, MA",
+      "Richmond, VA"
+    ],
+    "correctAnswer": "Philadelphia, PA"
+  },
+  {
+    "question": "What is the oldest surviving civilization?",
+    "answers": [
+      "Egyptian Civilization",
+      "Indus Valley Civilization",
+      "Mesopotamian Civilization",
+      "Chinese Civilization"
+    ],
+    "correctAnswer": "Chinese Civilization"
+  },
+  {
+    "question": "Who was known as the Sun King?",
+    "answers": [
+      "King Louis XIV",
+      "King Louis XV",
+      "King Louis XVI",
+      "King Charles VII"
+    ],
+    "correctAnswer": "King Louis XIV"
+  },
+  {
+    "question": "Which war was fought between the north and south regions in the United States?",
+    "answers": [
+      "World War I",
+      "World War II",
+      "The Revolutionary War",
+      "The Civil War"
+    ],
+    "correctAnswer": "The Civil War"
+  },
+  {
+    "question": "Who was the longest-reigning monarch in British history?",
+    "answers": [
+      "Queen Victoria",
+      "Queen Elizabeth I",
+      "King George III",
+      "Queen Elizabeth II"
+    ],
+    "correctAnswer": "Queen Elizabeth II"
+  },
+  {
+    "question": "What historical event was the Titanic's maiden voyage?",
+    "answers": [
+      "The start of World War I",
+      "The sinking of the Lusitania",
+      "The creation of the Panama Canal",
+      "The completion of the Transcontinental Railroad"
+    ],
+    "correctAnswer": "The sinking of the Lusitania"
+  },
+  {
+    "question": "What was the name of the last Tsar of Russia?",
+    "answers": [
+      "Alexander II",
+      "Peter the Great",
+      "Nicholas II",
+      "Ivan the Terrible"
+    ],
+    "correctAnswer": "Nicholas II"
+  },
+  {
+    "question": "What famous document begins: 'When in the course of human events...'",
+    "answers": [
+      "The Constitution of the United States",
+      "The Declaration of Independence",
+      "The Gettysburg Address",
+      "The Magna Carta"
+    ],
+    "correctAnswer": "The Declaration of Independence"
+  },
+  {
+    "question": "Who was the first emperor of Japan?",
+    "answers": [
       "Emperor Jimmu",
       "Emperor Meiji",
       "Emperor Hirohito",
       "Emperor Akihito"
-      ],
-      "correctAnswer": "Emperor Jimmu"
-      },
-      
-      {
-      "question": "Which ancient civilization built the Great Pyramid of Giza?",
-      "answers": [
-      "Mesopotamians",
-      "Greeks",
-      "Mayans",
-      "Ancient Egyptians"
-      ],
-      "correctAnswer": "Ancient Egyptians"
-      },
-      
-      {
-      "question": "Who wrote the play 'Romeo and Juliet'?",
-      "answers": [
+    ],
+    "correctAnswer": "Emperor Jimmu"
+  },
+
+  {
+    "question": "Which ancient civilization built the Great Pyramid of Giza?",
+    "answers": ["Mesopotamians", "Greeks", "Mayans", "Ancient Egyptians"],
+    "correctAnswer": "Ancient Egyptians"
+  },
+
+  {
+    "question": "Who wrote the play 'Romeo and Juliet'?",
+    "answers": [
       "William Shakespeare",
       "Christopher Marlowe",
       "John Milton",
       "George Bernard Shaw"
-      ],
-      "correctAnswer": "William Shakespeare"
-      },
-      
-      {
-      "question": "Which European country was the first to colonize India?",
-      "answers": [
-      "Portugal",
-      "France",
-      "Spain",
-      "Netherlands"
-      ],
-      "correctAnswer": "Portugal"
-      },
-      
-      {
-      "question": "What was the name of the famous naval battle in 1805 where Admiral Horatio Nelson died?",
-      "answers": [
+    ],
+    "correctAnswer": "William Shakespeare"
+  },
+
+  {
+    "question": "Which European country was the first to colonize India?",
+    "answers": ["Portugal", "France", "Spain", "Netherlands"],
+    "correctAnswer": "Portugal"
+  },
+
+  {
+    "question": "What was the name of the famous naval battle in 1805 where Admiral Horatio Nelson died?",
+    "answers": [
       "Battle of Trafalgar",
       "Battle of Waterloo",
       "Battle of Jutland",
       "Battle of Gettysburg"
-      ],
-      "correctAnswer": "Battle of Trafalgar"
-      },
-      
-      {
-      "question": "Who was the first female pharaoh of ancient Egypt?",
-      "answers": [
-      "Hatshepsut",
-      "Nefertiti",
-      "Cleopatra",
-      "Ankhesenamun"
-      ],
-      "correctAnswer": "Hatshepsut"
-      },
-      {
-      "question": "Which city was the capital of the Byzantine Empire?",
-      "answers": [
-      "Athens",
-      "Rome",
-      "Constantinople",
-      "Alexandria"
-      ],
-      "correctAnswer": "Constantinople"
-      },
-      
-      {
-      "question": "What was the main religion of the Khmer Empire in Cambodia?",
-      "answers": [
-      "Hinduism",
-      "Buddhism",
-      "Islam",
-      "Christianity"
-      ],
-      "correctAnswer": "Hinduism"
-      },
-      
-      {
-      "question": "Who was the first African-American President of the United States?",
-      "answers": [
+    ],
+    "correctAnswer": "Battle of Trafalgar"
+  },
+
+  {
+    "question": "Who was the first female pharaoh of ancient Egypt?",
+    "answers": ["Hatshepsut", "Nefertiti", "Cleopatra", "Ankhesenamun"],
+    "correctAnswer": "Hatshepsut"
+  },
+  {
+    "question": "Which city was the capital of the Byzantine Empire?",
+    "answers": ["Athens", "Rome", "Constantinople", "Alexandria"],
+    "correctAnswer": "Constantinople"
+  },
+
+  {
+    "question": "What was the main religion of the Khmer Empire in Cambodia?",
+    "answers": ["Hinduism", "Buddhism", "Islam", "Christianity"],
+    "correctAnswer": "Hinduism"
+  },
+
+  {
+    "question": "Who was the first African-American President of the United States?",
+    "answers": [
       "Barack Obama",
       "Martin Luther King Jr.",
       "Colin Powell",
       "Thurgood Marshall"
-      ],
-      "correctAnswer": "Barack Obama"
-      },
-      
-      {
-      "question": "Which war was fought between Sparta and Athens in ancient Greece?",
-      "answers": [
-      "Trojan War",
-      "Persian War",
-      "Peloponnesian War",
-      "Punic War"
-      ],
-      "correctAnswer": "Peloponnesian War"
-      }
+    ],
+    "correctAnswer": "Barack Obama"
+  },
 
-  ]
+  {
+    "question": "Which war was fought between Sparta and Athens in ancient Greece?",
+    "answers": ["Trojan War", "Persian War", "Peloponnesian War", "Punic War"],
+    "correctAnswer": "Peloponnesian War"
+  }
+]
