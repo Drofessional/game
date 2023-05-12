@@ -178,9 +178,9 @@ function displayHighscores() {
   }
   if (highscores.length > 0) {
     resetHighscoresBtn.classList.remove("hidden");
-} else {
+  } else {
     resetHighscoresBtn.classList.add("hidden");
-}
+  }
   document.getElementById('highscore-list').classList.remove('hidden');
 }
 
